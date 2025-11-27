@@ -90,8 +90,8 @@ jobs:
         ' >> .config
         make defconfig
         make download -j$(nproc)
-        find dl -size -6144c -exec ls -l {} \;
-        find dl -size -6144c -exec rm -f {} \;
+        find dl -size -1024c -exec ls -l {} \;
+        find dl -size -1024c -exec rm -f {} \;
              
     - name: Compile the firmware
       id: compile
